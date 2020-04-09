@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Challenge</h1>
+   
+   <script type="text/javascript">
+    function question1() { 
+        function sortArray(arrNumbers){                                  
+                                      
+                                      arrNumbers.sort((a, b) => a - b);   
+                                                                         
+                                      return arrNumbers;   
+                                    }                                                 
+                                      
+                                  
+                                      let num = prompt("Enter a array size : ");
+                                      let input = [null];
+                                  
+                                  for(let i = 0 ; i<num; i++){
+                                      input[i] = prompt("Enter a number : ");
+                                  
+                                  }
+                                     
+                                  alert(sortArray(input));
+     }
+</script>
+    <button onclick="question1();">QUESTION 1</button>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        function question2() {   
+      
+        function findprimes(number){
+  
+  let arr = [null] ;
+  let count = 0;
+  
+          for (var i = 2; i <= number; i++) {
+   
+              while (number % i == 0) {
+                if(arr[count-1]!=i){
+                arr[count] = i ;
+                count++;
+                }
+                  number = number / i;
+              }
+          }
+   
+          if (number < 1) {
+          
+            arr[count] = i ;
+                count++;
+       
+      }
+   return(arr);
+  }
+  let num = prompt("Enter a number : ");
+         alert('Primes are : ' + findprimes(num));
+         }        
+    </script>    
+        <button onclick="question2();">QUESTION 2</button>
+
+
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            function question3() {   
+                          function findLargestPalindrome(){
+
+let max = 0;
+let i = 999;
+let j = 999;
+
+for(i =999; i>100; i--){
+
+     for(j = 999; j>100; j--){
+        
+            let tempNum = i * j  ;
+            
+            let tempStringOriginal = i * j  + "";
+        
+            let tempStringReversed = tempStringOriginal.split("").reverse().join("");
+            
+            if(tempStringOriginal==tempStringReversed){
+
+                if(max<tempNum){  
+                    max = tempNum;    
+           }
+        }
+    }
+}
+
+return (max);
+}
+   alert('Primes are : ' + findLargestPalindrome());
+                 }    
+    </script>        
+        <button onclick="question3();">QUESTION 3</button>
+
+         
+
+</html>
