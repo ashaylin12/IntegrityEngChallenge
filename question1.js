@@ -16,7 +16,7 @@ async function start() {
 
   for(var i = 0 ; i<size; i++){
 
-     arrnum[i] = await ask('Enter a number : ');
+     arrnum[i] = await ask('Enter a number ' + (i+1) + ' of ' + size + '  :  ');
 
   }  
   
